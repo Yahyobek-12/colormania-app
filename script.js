@@ -13,6 +13,7 @@ form.addEventListener("submit", (e) => {
     if(newColor) {
         body.style.background = newColor;
         resultTxt.textContent = newColor;
+        resultTxt.style.color = newColor;
         resultTxt.style.border = `3px solid ${newColor}`;
     } else {
         
