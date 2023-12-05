@@ -13,10 +13,9 @@ form.addEventListener("submit", (e) => {
     if(newColor) {
         body.style.background = newColor;
         resultTxt.textContent = newColor;
-        resultTxt.style.color = newColor;
-    } else {
-        body.style.background = customColor;
-        resultTxt.textContent = "CustomColor:" + " " + customColor;
+        resultTxt.style.background = newColor;
+    } else if (newColor === "") {
+        resultTxt.innerHTML = "Color not found"
     }
 
     e.target.reset();
@@ -27,10 +26,10 @@ form.addEventListener("submit", (e) => {
 
 const loaderShort = document.querySelector(".loader-short");
 const loaderPage = document.querySelector(".loader");
-const counter = document.querySelector(".counter")
+const counter = document.querySelector(".count")
 
 let pos = 1;
-timerId = setInterval(addWidth, 50);
+timerId = setInterval(addWidth, 80);
 
 function addWidth() {
     if (pos === 100) {

@@ -1,11 +1,25 @@
 @media screen and (max-width: 350px) {
 
     .loader-long {
-        width: 88%;
-        left: 20px;
+        top: 0;
+        left: 0;
+        height: 10px;
+        border-radius: 0;
+    }
+
+    main {
+        width: 260px;
+        height: 250px;
+        margin-left: 0.1rem;
+    }
+
+    .main-logo {
+        display: none;
     }
 
     .result {
+        padding: 5px;
         font-size: 20px;
+        margin-top: 3rem;
     }
 }
