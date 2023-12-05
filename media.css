@@ -1,10 +1,9 @@
 @media screen and (max-width: 315px) {
 
     .loader-long {
-        top: 0;
-        left: 0;
-        height: 10px;
-        border-radius: 0;
+        width: 50%;
+        height: 15px;
+        bottom: 250px;
     }
 
     main {
@@ -21,5 +20,9 @@
         padding: 5px;
         font-size: 20px;
         margin-top: 3rem;
+    }
+
+    .from {
+        bottom: 180px;
     }
 }
