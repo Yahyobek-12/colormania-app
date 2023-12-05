@@ -13,11 +13,10 @@ form.addEventListener("submit", (e) => {
     if(newColor) {
         body.style.background = newColor;
         resultTxt.textContent = newColor;
-        resultTxt.style.background = newColor;
-    } else if (newColor === "") {
-        resultTxt.innerHTML = "Color not found"
+        resultTxt.style.border = `3px solid ${newColor}`;
+    } else {
+        
     }
-
     e.target.reset();
 });
 
@@ -29,20 +28,22 @@ const loaderPage = document.querySelector(".loader");
 const counter = document.querySelector(".count")
 
 let pos = 1;
-timerId = setInterval(addWidth, 80);
+timerId = setInterval(addWidth, 100);
 
 function addWidth() {
     if (pos === 100) {
         clearInterval()
-    } else {
-        console.log(pos++);
-        loaderShort.style.width = pos + "%"
+
+        setTimeout(() => {
+            loaderPage.classList.add(newClass)
+        }, [timerId])
+
         counter.classList.add(newClass)
+        
+    } else {
+        pos++
+        loaderShort.style.width = pos + "%"
         counter.innerHTML = pos + "%"
     }
 }
-
-setTimeout(() => {
-    loaderPage.classList.add(newClass)
-    
-}, 5500)
+addWidth()
