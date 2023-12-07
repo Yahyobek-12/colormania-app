@@ -1,9 +1,9 @@
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 450px) {
 
     .loader-long {
         width: 50%;
         height: 15px;
-        bottom: 200px;
+        bottom: 250px;
     }
 
     main {
@@ -23,6 +23,6 @@
     }
 
     .from {
-        bottom: 50px;
+        bottom: 100px;
     }
 }
